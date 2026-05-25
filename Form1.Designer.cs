@@ -40,9 +40,6 @@
             this.telecamereToolStripMenuItem.Text = "Telecamere";
             this.telecamereToolStripMenuItem.Click += new System.EventHandler(this.telecamereToolStripMenuItem_Click);
 
-            // RIAVVIA
-            this.riavviaToolStripMenuItem.Text = "Riavvia";
-            this.riavviaToolStripMenuItem.Click += new System.EventHandler(this.riavviaToolStripMenuItem_Click);
 
             // PANEL CONTAINER
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;

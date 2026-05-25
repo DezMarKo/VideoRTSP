@@ -67,7 +67,7 @@ namespace ProvaTelecamere
             if (n <= 6) return (2, 3);
             if (n <= 9) return (3, 3);
             return (4, 4);
-        }
+        } //AGGIUNGERE VALORI A GRIGLIA PER MAGGIOR NUMERO DI TELECAMERE
 
         private void MostraTelecamere(List<string> urls)
         {
@@ -221,7 +221,7 @@ namespace ProvaTelecamere
         }
 
         // -------------------------------
-        // MENU → TELECAMERE
+        // MENU TELECAMERE
         // -------------------------------
         private void telecamereToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -235,33 +235,6 @@ namespace ProvaTelecamere
             }
         }
 
-        // -------------------------------
-        // MENU → RIAVVIA
-        // -------------------------------
-       private async void riavviaToolStripMenuItem_Click(object sender, EventArgs e)
-{
-    try
-    {
-        // Chiude tutti i player attivi
-        foreach (var p in players)
-        {
-            try { p.Stop(); } catch { }
-            try { p.Dispose(); } catch { }
-        }
-
-        players.Clear();
-
-        // Aspetta che LibVLC liberi le risorse
-        await Task.Delay(300);
-
-        // Ricarica tutte le telecamere
-        RicaricaTelecamere();
-    }
-    catch
-    {
-        MessageBox.Show("Errore durante il riavvio delle telecamere.");
-    }
-}
-
+     
     }
 }

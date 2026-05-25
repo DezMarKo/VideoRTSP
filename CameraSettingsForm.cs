@@ -67,7 +67,7 @@ namespace ProvaTelecamere
 
         private void btnAggiungi_Click(object sender, EventArgs e)
         {
-            if (_config.Count >= 9)
+            if (_config.Count >= 9) //AUMENTARE PER MAGGIOR NUMERO DI TELECAMERE
             {
                 MessageBox.Show("Puoi aggiungere massimo 9 telecamere.");
                 return;
@@ -161,13 +161,5 @@ namespace ProvaTelecamere
             Close();
         }
 
-        // 🔥 SALVA ANCHE SE CHIUDI CON LA X
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.UserClosing)
-                this.DialogResult = DialogResult.OK;
-
-            base.OnFormClosing(e);
-        }
     }
 }
